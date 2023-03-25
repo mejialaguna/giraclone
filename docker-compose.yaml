@@ -1,0 +1,9 @@
+services:
+  entriesdb:
+    image: mongo:5.0.0
+    container_name: entries-database
+    ports:
+      - 27017:27017
+      # por defecto aqui es donde va a llegar y si la carpeta no esta va a ser creada por defecto
+    volumes:
+      - ./mongo:/data/db
